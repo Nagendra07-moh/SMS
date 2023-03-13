@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
 
+
+  F_name  = '';
+  L_name = '';
+  email = '';
+  Pass = '';
+
+
 }
