@@ -15,4 +15,8 @@ export class SerService {
    return this.http.post(`${this.apiUrl}/sign-up`,obj);
   }
 
+  sendData(details:any){
+    return this.http.post(`${this.apiUrl}/login`,details);
+  }
+
 }

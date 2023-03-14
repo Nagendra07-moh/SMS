@@ -5,10 +5,10 @@
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="exampleInputPassword1" class="form-label" name = "user_mail"  [(ngModel)]="u_email">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name = "user_password" [(ngModel)]="u_pass">
       </div>
-      <button  type="submit" class="btn btn-primary">Log-in</button>
+      <button  type="submit" class="btn btn-primary" (click) = "getData()">Log-in</button>
       <button  routerLink="/sign-up" type="submit" class="btn btn-danger ms-3">Sign-up</button>
     </form>
 </div>

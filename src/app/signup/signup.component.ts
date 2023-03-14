@@ -20,8 +20,8 @@ export class SignupComponent {
     this.obj.l_name = this.L_name;
     this.obj.email = this.email;
     this.obj.pass = this.Pass;
+    
 
-    // console.log(this.obj);
     this.ser.postMethod(this.obj).subscribe((res)=>{
       console.log(res);
     },(err)=>{})
