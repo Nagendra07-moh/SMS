@@ -21,8 +21,12 @@ export class SignupComponent {
     this.obj.email = this.email;
     this.obj.pass = this.Pass;
     
+    this.F_name = ''
+    this.L_name = '';
+    this.email = '';
+    this.Pass = '';
 
-    this.ser.postMethod(this.obj).subscribe((res)=>{
+    this.ser.register(this.obj).subscribe((res)=>{
       console.log(res);
     },(err)=>{})
     

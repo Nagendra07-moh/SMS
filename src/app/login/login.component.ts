@@ -22,9 +22,9 @@ export class LoginComponent {
     this.details.email = this.u_email;
     this.details.pass = this.u_pass;
 
-    // this.ser.postMethod(this.details).subscribe((res)=>{
-    //   console.log(res);
-    // },(err)=>{})
+    this.ser.login(this.details).subscribe((res)=>{
+      console.log(res);
+    },(err)=>{})
 
     console.log(this.details)
     

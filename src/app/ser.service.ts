@@ -11,11 +11,11 @@ export class SerService {
 
   apiUrl:any = 'http://localhost:5000';
 
-  postMethod(obj:any):Observable<any>{
+  register(obj:any):Observable<any>{
    return this.http.post(`${this.apiUrl}/sign-up`,obj);
   }
 
-  sendData(details:any){
+  login(details:any){
     return this.http.post(`${this.apiUrl}/login`,details);
   }
 

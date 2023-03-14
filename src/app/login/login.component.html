@@ -2,11 +2,11 @@
    <form>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name = "u_email"  [(ngModel)]="u_email">
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label" name = "user_mail"  [(ngModel)]="u_email">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" name = "user_password" [(ngModel)]="u_pass">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name = "u_pass" [(ngModel)]="u_pass">
       </div>
       <button  type="submit" class="btn btn-primary" (click) = "getData()">Log-in</button>
       <button  routerLink="/sign-up" type="submit" class="btn btn-danger ms-3">Sign-up</button>
