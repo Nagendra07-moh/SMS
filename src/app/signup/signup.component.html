@@ -1,19 +1,19 @@
 <div class="cointaner">
    <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label"  >First Name</label>
-      <input type="email" class="form-control"  name = "name" [(ngModel)]="F_name"  id="exampleFormControlInput1" placeholder="Name" >
+      <input type="email" class="form-control"  name = "name" [(ngModel)]="F_name"  id="first_name" placeholder="Name" >
    </div>
    <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="L_name" placeholder="Name">
+      <input type="email" class="form-control" id="Last_name" [(ngModel)]="L_name" placeholder="Name">
    </div>
    <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="email" placeholder="name@example.com">
+      <input type="email" class="form-control" id="user_email" [(ngModel)]="email" placeholder="name@example.com">
    </div>
    <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Password</label>
       <input type="password" class="form-control" id="inputPassword" [(ngModel)]="Pass" placeholder="password">
    </div>
-   <button  routerLink="/sign-up" type="submit" class="btn btn-danger mt-2">Sign-up</button>
+   <button  routerLink="/sign-up" type="submit" class="btn btn-danger mt-2" (click)=sendData()>Sign-up</button>
 </div>
