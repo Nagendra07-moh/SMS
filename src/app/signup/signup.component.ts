@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { SerService } from '../ser.service';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +11,7 @@ import { SerService } from '../ser.service';
 })
 export class SignupComponent {
 
-  constructor(private http:HttpClient, private ser:SerService){
+  constructor(private http:HttpClient, private ser:SerService,private toastr: ToastrService){
 
   }
   obj:any = {};
@@ -27,7 +29,7 @@ export class SignupComponent {
     this.Pass = '';
 
     this.ser.register(this.obj).subscribe((res)=>{
-      console.log(res);
+      this.toastr.success('Congrats!', 'Your Credentials has been registered sucessfully!');
     },(err)=>{})
     
 
