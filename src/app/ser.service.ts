@@ -19,4 +19,8 @@ export class SerService {
     return this.http.post(`${this.apiUrl}/login`,details);
   }
 
+  show(){
+    return this.http.get(this.apiUrl + '/home');
+  }
+
 }
