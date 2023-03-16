@@ -1,8 +1,8 @@
 <div class="cointainer mt-3">
    <div class="row">
       <div class="col ms-3 text-light">
-         <p class="h3  text-light fw-bold ">Students Records<a class="btn btn-danger btn-sm ms-2" routerLink="/add">
-            <i class = "fa fa-plus-circle me-1"></i>
+         <p class="h3  text-light fw-bold ">Students Records<a class="btn btn-danger btn-sm ms-2 me-1" routerLink="/add">
+            <i class="fa fa-user-o me-1" aria-hidden="true"></i>
             New</a></p>
          <p class = "fst-italic mt-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut incidunt saepe laboriosam iusto? Blanditiis, aspernatur laborum quo quis sunt ipsa quasi quos beatae ex itaque veritatis, ipsum perferendis inventore repellat?
@@ -17,7 +17,8 @@
 
                      </div>
                      <div class="col">
-                        <button class="btn btn-danger mt-2">Search</button>
+                        <button class="btn btn-danger mt-2">
+                           <i class="fa fa-chevron-left me-2"></i>Search</button>
                      </div>
                   </div>
                   
@@ -30,5 +31,41 @@
 </div>
 
 <!-- WEIEW ALL THE RECORDS -->
+<div class="cointaner mt-4 ms-3">
+   <div class="row">
+      <!-- <div class="col-md-6" *ngFor="let item of TempList;let i = index"> -->
+         <div class="col-md-6">
+         <div class="card list-group-item-danger shadow-lg " >
+            <div class="card-body" >
+               <div class="row align-items-center mb-2" >
+                  <div class="col-sm-4 mb-2" >
+                     <!-- image here -->
+                     <!-- <img *ngIf="!item.url" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F5%2FUser-Profile-PNG-High-Quality-Image.png&f=1&nofb=1&ipt=953094288874632198f9f20701f545310d6e1632b18cfd66182324345e13b27b&ipo=images" alt="" class="contact-image" >
+                     <img src="{{item.url}}" alt="" srcset="" class="contact-image"> -->
+                  </div>
+                  <div class="col-sm-7 mb-2" >
+                     <!--This is to display  the data which we are fetching form database  -->
+                     <!-- <ul class="list-group"  >
+                        <li class="list-group-item"> Name : <span class="fw-bold">{{item.name}}</span></li>
+                        <li class="list-group-item"> Email : <span class="fw-bold">{{item.email}}</span></li>
+                        <li class="list-group-item"> Mobile : <span class="fw-bold">{{item.mobile}}</span></li>
+                     </ul> -->
+                  </div>
+                  <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+                     <a routerLink="/view/:contactId" class="btn btn-warning my-1">
+                        <i class="fa fa-eye"></i>
+                     </a>
+                     <a routerLink="/edit/:contactId" class="btn btn-primary my-2">
+                        <i class="fa fa-eye" ></i>
+                     </a>
+                     <button class="btn btn-danger"><i class ="fa fa-trash-alt my-1"></i></button>   <!-- This is for delete button -->
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 
 

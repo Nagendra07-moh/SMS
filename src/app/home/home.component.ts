@@ -12,4 +12,11 @@ export class HomeComponent {
   searchData(){
     
   }
+
+  F_name =  '';
+  L_name = '';
+  email = '';
+  
+
+
 }
