@@ -15,8 +15,6 @@ export class HomeComponent {
       this.myser.show().subscribe((data:any)=>{
         this.allContact = data
         this.TempList = data;
-        // console.log(this.TempList);
-        // console.log(data)
       },(err)=>{
         console.log(err)
       })
