@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { SerService } from '../ser.service';
 import { FormControl,FormGroup , Validator, Validators} from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private http:HttpClient, private ser:SerService,private toastr: ToastrService){
+  constructor(private http:HttpClient, private ser:SerService,private toastr: ToastrService,private route: Router){
   }
 
   u_email = '';
@@ -29,7 +30,7 @@ export class LoginComponent {
 
       if(this.obj.email == true &&  this.obj.password == true){
           this.toastr.success('Congrats!', 'Login Sucessfull!');
-          
+          this.route.navigateByUrl('/home');
       }else if(this.obj.email == false){
           this.toastr.show('Email not found!', 'Please enter the correct email');
       }else if(this.obj.password == false ){
