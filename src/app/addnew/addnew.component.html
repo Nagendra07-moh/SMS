@@ -1,1 +1,32 @@
-<p>addnew works!</p>
+<div class="container mt-3 ms-lg-3 mb-3">
+   <div class="row">
+      <div class="col ms-0">
+         <p class="h3 font-bold text-light mb-3 ">Add Contact</p>
+         <p class="fst-italic text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quod, repellendus quae magnam doloribus nisi voluptate laudantium fugit enim voluptatibus autem alias exercitationem? Alias explicabo nam quo neque, laborum ipsa!</p>
+      </div>
+   </div>
+</div>
+
+<!-- CREATE CONTACT FORM STARTS HERE! -->
+
+<div class="cointaner ms-4  mb-4">
+   <div class="row">
+      <div class="col-sm-4">
+         <form>
+             <div class="mb-2 ms-1">
+               <input type="email" class="form-control" placeholder="First name" name="email" [(ngModel)] = "F_name" >
+            </div> <div class="mb-2 ms-1">
+               <input type="text" class="form-control" placeholder="Last name"  name="type" [(ngModel)] = "L_name">
+            </div>
+            <div class="mb-2 ms-1">
+               <input type="text" class="form-control" placeholder="email@something.com" name="title" [(ngModel)] = "email">
+            </div>
+            <div class="mb-2 ms-1">
+               <input type="button" class="btn btn-danger" type="submit" (click)="sendData()" (click) = "changeUrl()">
+               <a routerLink="/" class="btn btn-dark ms-2">Close</a>
+            </div>
+         </form>
+     </div>
+   </div>
+</div>
+

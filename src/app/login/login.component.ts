@@ -29,6 +29,7 @@ export class LoginComponent {
 
       if(this.obj.email == true &&  this.obj.password == true){
           this.toastr.success('Congrats!', 'Login Sucessfull!');
+          
       }else if(this.obj.email == false){
           this.toastr.show('Email not found!', 'Please enter the correct email');
       }else if(this.obj.password == false ){

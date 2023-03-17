@@ -19,8 +19,16 @@ export class SerService {
     return this.http.post(`${this.apiUrl}/login`,details);
   }
 
+  adding(details:any){
+    return this.http.post(`${this.apiUrl}/add`,details);
+  }
+
   show(){
     return this.http.get(this.apiUrl + '/home');
+  }
+
+  saveUser(obj:any):Observable<any>{
+    return this.http.post(`${this.apiUrl}/add`,obj)
   }
 
 }
