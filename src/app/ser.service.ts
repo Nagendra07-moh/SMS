@@ -30,5 +30,8 @@ export class SerService {
   saveUser(obj:any):Observable<any>{
     return this.http.post(`${this.apiUrl}/add`,obj)
   }
+  deleting(details:any){
+    return this.http.post(`${this.apiUrl}/home`,details);
+  }
 
 }

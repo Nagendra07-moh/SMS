@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
+
 import { SerService } from '../ser.service'
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -8,7 +13,9 @@ import { SerService } from '../ser.service'
 })
 export class HomeComponent {
 
-  constructor(private myser: SerService){};
+  constructor(private http:HttpClient, private myser:SerService,private toastr: ToastrService,private router:Router){
+
+  }
 
   allContact:any 
     ngOnInit(): void {
@@ -36,7 +43,23 @@ export class HomeComponent {
       }
     }
 
-  
+    delObj:any = {};
+    del(i:any){
+
+      this.delObj = i;
+ 
+      this.myser.deleting(this.delObj).subscribe((res)=>{
+        this.toastr.success('Congrats!', 'The Entry has been deleted sucessfully!');
+        // console.log(`data send sucessfilly of ${this.delObj.F_name}`);
+        // this.router.navigateByUrl('/home'); 
+        // this.window.reload()
+        window.location.reload();
+        
+      },(err)=>{})
+
+          
+
+    }
 
   F_name =  '';
   L_name = '';
