@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import { AddnewComponent } from './addnew/addnew.component';
+import { UpdateComponent } from './update/update.component';
 
 
 
@@ -24,7 +25,8 @@ import { AddnewComponent } from './addnew/addnew.component';
     LoginComponent,
     NavbarComponent,
     HomeComponent,
-    AddnewComponent
+    AddnewComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
